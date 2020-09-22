@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ATMA.exe" size="363464">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ATMA.exe" size="380872">
       <assemblyIdentity name="ATMA" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hbly8uA8T6RlJKSxsjq5+cKP596zNMwpMYNxZBd8clg=</dsig:DigestValue>
+        <dsig:DigestValue>bLG5iNLJBm+vUSOXnC7PnSq9KyBz3x/GYU8GlRiZqhU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

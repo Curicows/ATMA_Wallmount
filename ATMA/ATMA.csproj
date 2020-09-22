@@ -153,6 +153,14 @@
     <Content Include="Firefox\softokn3.dll" />
     <Content Include="Firefox\xul.dll" />
     <Content Include="logo-topo-1.ico" />
+    <None Include="Resources\off.jpg" />
+    <None Include="Resources\4screen.jpg" />
+    <None Include="Resources\3screentop.jpg" />
+    <None Include="Resources\3screenbottom.jpg" />
+    <None Include="Resources\3screen.jpg" />
+    <None Include="Resources\2screenhorizontal.jpg" />
+    <None Include="Resources\2screen11.jpg" />
+    <None Include="Resources\2screen.jpg" />
     <None Include="Resources\img_532041.png" />
   </ItemGroup>
   <ItemGroup>

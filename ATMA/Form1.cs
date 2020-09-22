@@ -59,28 +59,60 @@ namespace ATMA
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // tableLayoutPanel1.ColumnCount = 2;
-           // tableLayoutPanel1.Controls.Remove(button4);
+            // tableLayoutPanel1.ColumnCount = 2;
+            // tableLayoutPanel1.Controls.Remove(button4);
+            /*  TableLayoutRowStyleCollection styles = this.MainPanel.RowStyles;
+              int i = 0;
+              foreach (RowStyle style in styles)
+              {
+                  i++;
+                  // if (style.SizeType == SizeType.Absolute)
+                  if (i == 3) {
+                      style.SizeType = SizeType.Absolute;
+                      style.Height = 0;
+                      style.SizeType = SizeType.Percent;
+                      style.width = 
+                  }
+                  //MessageBox.Show(style.ToString());
+                  //style.SizeType = SizeType.AutoSize;
+                  //}*/
             TableLayoutColumnStyleCollection styles = this.TopPanel.ColumnStyles;
             int i = 0;
             foreach (ColumnStyle style in styles)
             {
                 i++;
-                // if (style.SizeType == SizeType.Absolute)
-                if (i == 3) { 
-                style.SizeType = SizeType.Absolute;
-                style.Width = 0;
+                if (i == 1)
+                {
+                    style.SizeType = SizeType.Percent;
+                    style.Width = 66;
+                } else if (i == 3) {
+                    style.SizeType = SizeType.Absolute;
+                    style.Width = 0;
                 }
-                //MessageBox.Show(style.ToString());
-                //style.SizeType = SizeType.AutoSize;
-                //}
             }
         }
+    
 
         private void button2_Click(object sender, EventArgs e)
         {
            // tableLayoutPanel1.Controls.Add(button4,0,0);
            
+        }
+
+        public void ColumnHide(int row,int column)
+        {
+            // column
+            TableLayoutColumnStyleCollection styles = this.TopPanel.ColumnStyles;
+            int i = 0;
+            foreach (ColumnStyle style in styles)
+            {
+                i++;
+                if (i == column)
+                {
+                 /*   style.SizeType = SizeType.Absolute;
+                    style.Width = 0;*/
+                }
+            }
         }
     }
 }

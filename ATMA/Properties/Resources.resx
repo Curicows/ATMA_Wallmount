@@ -121,4 +121,28 @@
   <data name="img_532041" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_532041.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\off.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2screen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2screen11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2screen11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2screenhorizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2screenhorizontal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3screen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3screenbottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3screenbottom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3screentop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3screentop.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4screen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
