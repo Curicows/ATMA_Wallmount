@@ -1,5 +1,21 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ATMA.Properties" GeneratedClassName="Settings">
   <Profiles />
-  <Settings />
+  <Settings>
+    <Setting Name="Fav1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">www.atmadigital.com.br</Value>
+    </Setting>
+    <Setting Name="Fav2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">www.google.com.br</Value>
+    </Setting>
+    <Setting Name="Fav3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">www.google.com.br</Value>
+    </Setting>
+    <Setting Name="Fav4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">www.google.com.br</Value>
+    </Setting>
+    <Setting Name="Fav5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">www.google.com.br</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
