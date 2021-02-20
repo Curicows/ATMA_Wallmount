@@ -102,11 +102,13 @@
             // 
             // geckoWebBrowser1
             // 
+            this.geckoWebBrowser1.ContextMenuStrip = this.contextMenuStrip1;
             this.geckoWebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.geckoWebBrowser1.FrameEventsPropagateToMainWindow = false;
             this.geckoWebBrowser1.Location = new System.Drawing.Point(1, 1);
             this.geckoWebBrowser1.Margin = new System.Windows.Forms.Padding(0);
             this.geckoWebBrowser1.Name = "geckoWebBrowser1";
+            this.geckoWebBrowser1.NoDefaultContextMenu = true;
             this.geckoWebBrowser1.Size = new System.Drawing.Size(313, 305);
             this.geckoWebBrowser1.TabIndex = 0;
             this.geckoWebBrowser1.UseHttpActivityObserver = false;
@@ -114,22 +116,26 @@
             // 
             // geckoWebBrowser2
             // 
+            this.geckoWebBrowser2.ContextMenuStrip = this.contextMenuStrip1;
             this.geckoWebBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.geckoWebBrowser2.FrameEventsPropagateToMainWindow = false;
             this.geckoWebBrowser2.Location = new System.Drawing.Point(315, 1);
             this.geckoWebBrowser2.Margin = new System.Windows.Forms.Padding(0);
             this.geckoWebBrowser2.Name = "geckoWebBrowser2";
+            this.geckoWebBrowser2.NoDefaultContextMenu = true;
             this.geckoWebBrowser2.Size = new System.Drawing.Size(313, 305);
             this.geckoWebBrowser2.TabIndex = 1;
             this.geckoWebBrowser2.UseHttpActivityObserver = false;
             // 
             // geckoWebBrowser5
             // 
+            this.geckoWebBrowser5.ContextMenuStrip = this.contextMenuStrip1;
             this.geckoWebBrowser5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.geckoWebBrowser5.FrameEventsPropagateToMainWindow = false;
             this.geckoWebBrowser5.Location = new System.Drawing.Point(629, 1);
             this.geckoWebBrowser5.Margin = new System.Windows.Forms.Padding(0);
             this.geckoWebBrowser5.Name = "geckoWebBrowser5";
+            this.geckoWebBrowser5.NoDefaultContextMenu = true;
             this.geckoWebBrowser5.Size = new System.Drawing.Size(313, 305);
             this.geckoWebBrowser5.TabIndex = 2;
             this.geckoWebBrowser5.UseHttpActivityObserver = false;
@@ -152,22 +158,26 @@
             // 
             // geckoWebBrowser3
             // 
+            this.geckoWebBrowser3.ContextMenuStrip = this.contextMenuStrip1;
             this.geckoWebBrowser3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.geckoWebBrowser3.FrameEventsPropagateToMainWindow = false;
             this.geckoWebBrowser3.Location = new System.Drawing.Point(1, 1);
             this.geckoWebBrowser3.Margin = new System.Windows.Forms.Padding(0);
             this.geckoWebBrowser3.Name = "geckoWebBrowser3";
+            this.geckoWebBrowser3.NoDefaultContextMenu = true;
             this.geckoWebBrowser3.Size = new System.Drawing.Size(470, 305);
             this.geckoWebBrowser3.TabIndex = 0;
             this.geckoWebBrowser3.UseHttpActivityObserver = false;
             // 
             // geckoWebBrowser4
             // 
+            this.geckoWebBrowser4.ContextMenuStrip = this.contextMenuStrip1;
             this.geckoWebBrowser4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.geckoWebBrowser4.FrameEventsPropagateToMainWindow = false;
             this.geckoWebBrowser4.Location = new System.Drawing.Point(472, 1);
             this.geckoWebBrowser4.Margin = new System.Windows.Forms.Padding(0);
             this.geckoWebBrowser4.Name = "geckoWebBrowser4";
+            this.geckoWebBrowser4.NoDefaultContextMenu = true;
             this.geckoWebBrowser4.Size = new System.Drawing.Size(470, 305);
             this.geckoWebBrowser4.TabIndex = 1;
             this.geckoWebBrowser4.UseHttpActivityObserver = false;
@@ -182,6 +192,7 @@
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(965, 675);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ATMA Digital";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

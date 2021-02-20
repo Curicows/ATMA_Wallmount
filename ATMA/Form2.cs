@@ -13,6 +13,9 @@ namespace ATMA
     public partial class Form2 : Form
     {
         System.Windows.Forms.Form f = System.Windows.Forms.Application.OpenForms["Form1"];
+        Vars vars = new Vars();
+        
+        
         public Form2()
         {
             InitializeComponent();
@@ -23,21 +26,24 @@ namespace ATMA
            textBox2.Text = ((Form1)f).geckoWebBrowser2.Url.ToString();
            textBox3.Text = ((Form1)f).geckoWebBrowser5.Url.ToString();
            textBox4.Text = ((Form1)f).geckoWebBrowser3.Url.ToString();
-           textBox5.Text = ((Form1)f).geckoWebBrowser4.Url.ToString();
+           //textBox5.Text = ((Form1)f).geckoWebBrowser4.Url.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-          ((Form1)f).geckoWebBrowser1.Navigate(textBox1.Text.ToString());
+            //((Form1)f).geckoWebBrowser1.Navigate(textBox1.Text.ToString());,
+            navigateCorrect(1);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-          ((Form1)f).geckoWebBrowser2.Navigate(textBox2.Text.ToString());
+            //((Form1)f).geckoWebBrowser2.Navigate(textBox2.Text.ToString());
+            navigateCorrect(2);
         }
         private void button3_Click(object sender, EventArgs e)
         {
-          ((Form1)f).geckoWebBrowser5.Navigate(textBox3.Text.ToString());
+            //((Form1)f).geckoWebBrowser5.Navigate(textBox3.Text.ToString());
+            navigateCorrect(3);
         }
 
         public static bool hasHttpFunc(string a)
@@ -106,6 +112,11 @@ namespace ATMA
             unBorder();
             OffButton.FlatAppearance.BorderColor = Color.Red;
             OffButton.FlatAppearance.BorderSize = 3;
+            ReadOnlyText();
+            //textBox1.ReadOnly = false;
+            vars.actualScreen = 1;
+            hideText();
+            button8.BackgroundImage = ATMA.Properties.Resources._1;
         }
 
         private void Vertical2Button_Click(object sender, EventArgs e)
@@ -119,6 +130,12 @@ namespace ATMA
             unBorder();
             Vertical2Button.FlatAppearance.BorderColor = Color.Red;
             Vertical2Button.FlatAppearance.BorderSize = 3;
+            ReadOnlyText();
+           // textBox1.ReadOnly = false;
+           // textBox2.ReadOnly = false;
+            vars.actualScreen = 3;
+            hideText();
+            button8.BackgroundImage = ATMA.Properties.Resources._3;
         }
 
         private void Screen4Button_Click(object sender, EventArgs e)
@@ -135,6 +152,13 @@ namespace ATMA
             unBorder();
             Screen4Button.FlatAppearance.BorderColor = Color.Red;
             Screen4Button.FlatAppearance.BorderSize = 3;
+          //  textBox1.ReadOnly = false;
+          //  textBox2.ReadOnly = false;
+          //  textBox3.ReadOnly = false;
+          //  textBox4.ReadOnly = false;
+            vars.actualScreen = 8;
+            hideText();
+            button8.BackgroundImage = ATMA.Properties.Resources._8;
         }
 
         private void Horizontal2Button_Click(object sender, EventArgs e)
@@ -149,6 +173,12 @@ namespace ATMA
             unBorder();
             Horizontal2Button.FlatAppearance.BorderColor = Color.Red;
             Horizontal2Button.FlatAppearance.BorderSize = 3;
+            ReadOnlyText();
+           // textBox1.ReadOnly = false;
+           // textBox3.ReadOnly = false;
+            vars.actualScreen = 4;
+            hideText();
+            button8.BackgroundImage = ATMA.Properties.Resources._4;
         }
 
         private void Bot2Button_Click(object sender, EventArgs e)
@@ -164,6 +194,13 @@ namespace ATMA
             unBorder();
             Bot2Button.FlatAppearance.BorderColor = Color.Red;
             Bot2Button.FlatAppearance.BorderSize = 3;
+            ReadOnlyText();
+         //   textBox1.ReadOnly = false;
+         //   textBox2.ReadOnly = false;
+         //   textBox3.ReadOnly = false;
+            vars.actualScreen = 6;
+            hideText();
+            button8.BackgroundImage = ATMA.Properties.Resources._6;
         }
 
         private void Top3Button_Click(object sender, EventArgs e)
@@ -179,6 +216,13 @@ namespace ATMA
             unBorder();
             Top3Button.FlatAppearance.BorderColor = Color.Red;
             Top3Button.FlatAppearance.BorderSize = 3;
+            ReadOnlyText();
+          //  textBox1.ReadOnly = false;
+          //  textBox3.ReadOnly = false;
+          //  textBox4.ReadOnly = false;
+            vars.actualScreen = 5;
+            hideText();
+            button8.BackgroundImage = ATMA.Properties.Resources._5;
         }
 
         private void Screen3Button_Click(object sender, EventArgs e)
@@ -193,10 +237,32 @@ namespace ATMA
             unBorder();
             Screen3Button.FlatAppearance.BorderColor = Color.Red;
             Screen3Button.FlatAppearance.BorderSize = 3;
+            ReadOnlyText();
+           // textBox1.ReadOnly = false;
+           // textBox2.ReadOnly = false;
+            //textBox5.ReadOnly = false;
+            vars.actualScreen = 7;
+            hideText();
+            button8.BackgroundImage = ATMA.Properties.Resources._7;
         }
         private void Screen2Button_Click(object sender, EventArgs e)
         {
-
+            ((Form1)f).ColumnShow(1, "top");
+            ((Form1)f).ColumnShow(2, "top");
+            ((Form1)f).ColumnChange(1,70, "top");
+            ((Form1)f).ColumnChange(2, 30, "top");
+            ((Form1)f).ColumnHide(3, "top");
+            ((Form1)f).RowHide(3);
+            unRed();
+            unBorder();
+            Screen2Button.FlatAppearance.BorderColor = Color.Red;
+            Screen2Button.FlatAppearance.BorderSize = 3;
+            ReadOnlyText();
+           // textBox1.ReadOnly = false;
+           // textBox2.ReadOnly = false;
+            vars.actualScreen = 2;
+            hideText();
+            button8.BackgroundImage = ATMA.Properties.Resources._2;
         }
 
         private void unRed()
@@ -223,14 +289,24 @@ namespace ATMA
             Screen2Button.FlatAppearance.BorderSize = 0;
         }
 
+        private void ReadOnlyText()
+        {
+          /*  textBox1.ReadOnly = true;
+            textBox2.ReadOnly = true;
+            textBox3.ReadOnly = true;
+            textBox4.ReadOnly = true;
+            //textBox5.ReadOnly = true;*/
+        }
+
         private void NavegarButton4_Click(object sender, EventArgs e)
         {
-            ((Form1)f).geckoWebBrowser3.Navigate(textBox4.Text.ToString());
+            //((Form1)f).geckoWebBrowser3.Navigate(textBox4.Text.ToString());
+            navigateCorrect(4);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            ((Form1)f).geckoWebBrowser4.Navigate(textBox5.Text.ToString());
+            //((Form1)f).geckoWebBrowser4.Navigate(textBox5.Text.ToString());
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -263,24 +339,275 @@ namespace ATMA
             ((Form1)f).geckoWebBrowser4.Reload();
         }
 
-        private void FavButton2_Click(object sender, EventArgs e)
+        private void hideText()
         {
-            Properties.Settings.Default.Fav2 = textBox2.Text.ToString();
+            if (vars.actualScreen == 1)
+            {
+                textBox1.Visible = true;
+                textBox2.Visible = false;
+                textBox3.Visible = false;
+                textBox4.Visible = false;
+                label1.Visible = true;
+                label2.Visible = false;
+                label3.Visible = false;
+                label4.Visible = false;
+                button5.Visible = true;
+                button6.Visible = false;
+                button4.Visible = false;
+                button3.Visible = false;
+                NavegarButton1.Visible = true;
+                NavegarButton2.Visible = false;
+                NavegarButton3.Visible = false;
+                NavegarButton4.Visible = false;
+            }
+            else if (vars.actualScreen == 2)
+            {
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = false;
+                textBox4.Visible = false;
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = false;
+                label4.Visible = false;
+                button5.Visible = true;
+                button6.Visible = true;
+                button4.Visible = false;
+                button3.Visible = false;
+                NavegarButton1.Visible = true;
+                NavegarButton2.Visible = true;
+                NavegarButton3.Visible = false;
+                NavegarButton4.Visible = false;
+            }
+            else if (vars.actualScreen == 3)
+            {
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = false;
+                textBox4.Visible = false;
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = false;
+                label4.Visible = false;
+                button5.Visible = true;
+                button6.Visible = true;
+                button4.Visible = false;
+                button3.Visible = false;
+                NavegarButton1.Visible = true;
+                NavegarButton2.Visible = true;
+                NavegarButton3.Visible = false;
+                NavegarButton4.Visible = false;
+            }
+            else if (vars.actualScreen == 4)
+            {
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = false;
+                textBox4.Visible = false;
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = false;
+                label4.Visible = false;
+                button5.Visible = true;
+                button6.Visible = true;
+                button4.Visible = false;
+                button3.Visible = false;
+                NavegarButton1.Visible = true;
+                NavegarButton2.Visible = true;
+                NavegarButton3.Visible = false;
+                NavegarButton4.Visible = false;
+            }
+            else if (vars.actualScreen == 5)
+            {
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                textBox4.Visible = false;
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = false;
+                button5.Visible = true;
+                button6.Visible = true;
+                button4.Visible = true;
+                button3.Visible = false;
+                NavegarButton1.Visible = true;
+                NavegarButton2.Visible = true;
+                NavegarButton3.Visible = true;
+                NavegarButton4.Visible = false;
+            }
+            else if (vars.actualScreen == 6)
+            {
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                textBox4.Visible = false;
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = false;
+                button5.Visible = true;
+                button6.Visible = true;
+                button4.Visible = true;
+                button3.Visible = false;
+                NavegarButton1.Visible = true;
+                NavegarButton2.Visible = true;
+                NavegarButton3.Visible = true;
+                NavegarButton4.Visible = false;
+            }
+            else if (vars.actualScreen == 7)
+            {
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                textBox4.Visible = false;
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = false;
+                button5.Visible = true;
+                button6.Visible = true;
+                button4.Visible = true;
+                button3.Visible = false;
+                NavegarButton1.Visible = true;
+                NavegarButton2.Visible = true;
+                NavegarButton3.Visible = true;
+                NavegarButton4.Visible = false;
+            }
+            else if (vars.actualScreen == 8)
+            {
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                textBox4.Visible = true;
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                button5.Visible = true;
+                button6.Visible = true;
+                button4.Visible = true;
+                button3.Visible = true;
+                NavegarButton1.Visible = true;
+                NavegarButton2.Visible = true;
+                NavegarButton3.Visible = true;
+                NavegarButton4.Visible = true;
+            }
+
         }
 
-        private void FavButton3_Click(object sender, EventArgs e)
+        private void navigateCorrect(int buttonPressed)
         {
-            Properties.Settings.Default.Fav3 = textBox3.Text.ToString();
+            if (vars.actualScreen == 1)
+            {
+                if (buttonPressed == 1)
+                {
+                    ((Form1)f).geckoWebBrowser1.Navigate(textBox1.Text.ToString());
+                }
+            }
+            else if (vars.actualScreen == 2)
+            {
+                if (buttonPressed == 1)
+                {
+                    ((Form1)f).geckoWebBrowser1.Navigate(textBox1.Text.ToString());
+                }
+                else if (buttonPressed == 2)
+                {
+                    ((Form1)f).geckoWebBrowser2.Navigate(textBox2.Text.ToString());
+                }
+            }
+            else if (vars.actualScreen == 3)
+            {
+                if (buttonPressed == 1)
+                {
+                    ((Form1)f).geckoWebBrowser1.Navigate(textBox1.Text.ToString());
+                }
+                else if (buttonPressed == 2)
+                {
+                    ((Form1)f).geckoWebBrowser2.Navigate(textBox2.Text.ToString());
+                }
+            }
+            else if (vars.actualScreen == 4)
+            {
+                if (buttonPressed == 1)
+                {
+                    ((Form1)f).geckoWebBrowser1.Navigate(textBox1.Text.ToString());
+                }
+                else if (buttonPressed == 2)
+                {
+                    ((Form1)f).geckoWebBrowser3.Navigate(textBox2.Text.ToString());
+                }
+            }
+            else if (vars.actualScreen == 5)
+            {
+                if (buttonPressed == 1)
+                {
+                    ((Form1)f).geckoWebBrowser1.Navigate(textBox1.Text.ToString());
+                }
+                else if (buttonPressed == 2)
+                {
+                    ((Form1)f).geckoWebBrowser3.Navigate(textBox2.Text.ToString());
+                }
+                else if (buttonPressed == 3)
+                {
+                    ((Form1)f).geckoWebBrowser4.Navigate(textBox3.Text.ToString());
+                }
+            }
+            else if (vars.actualScreen == 6)
+            {
+                if (buttonPressed == 1)
+                {
+                    ((Form1)f).geckoWebBrowser1.Navigate(textBox1.Text.ToString());
+                }
+                else if (buttonPressed == 2)
+                {
+                    ((Form1)f).geckoWebBrowser2.Navigate(textBox2.Text.ToString());
+                }
+                else if (buttonPressed == 3)
+                {
+                    ((Form1)f).geckoWebBrowser3.Navigate(textBox3.Text.ToString());
+                }
+            }
+            else if (vars.actualScreen == 7)
+            {
+                if (buttonPressed == 1)
+                {
+                    ((Form1)f).geckoWebBrowser1.Navigate(textBox1.Text.ToString());
+                }
+                else if (buttonPressed == 2)
+                {
+                    ((Form1)f).geckoWebBrowser2.Navigate(textBox2.Text.ToString());
+                }
+                else if (buttonPressed == 3)
+                {
+                    ((Form1)f).geckoWebBrowser5.Navigate(textBox3.Text.ToString());
+                }
+            }
+            else if (vars.actualScreen == 8)
+            {
+                if (buttonPressed == 1)
+                {
+                    ((Form1)f).geckoWebBrowser1.Navigate(textBox1.Text.ToString());
+                }
+                else if (buttonPressed == 2)
+                {
+                    ((Form1)f).geckoWebBrowser2.Navigate(textBox2.Text.ToString());
+                }
+                else if (buttonPressed == 3)
+                {
+                    ((Form1)f).geckoWebBrowser3.Navigate(textBox3.Text.ToString());
+                }
+                else if (buttonPressed == 4)
+                {
+                    ((Form1)f).geckoWebBrowser4.Navigate(textBox4.Text.ToString());
+                }
+            }
+
         }
 
-        private void FavButton4_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Fav4 = textBox4.Text.ToString();
-        }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.Fav5 = textBox5.Text.ToString();
         }
     }
 }
